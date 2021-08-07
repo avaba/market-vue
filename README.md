@@ -1,4 +1,4 @@
-# market-vue
+# market-book
 
 ## Project setup
 ```
