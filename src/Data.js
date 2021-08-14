@@ -1,5 +1,5 @@
 const Data = {
-  message: 'Hello Vue',
+  message: "Hello Vue",
 };
 
 export default Data;
