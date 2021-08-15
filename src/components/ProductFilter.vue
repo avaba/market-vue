@@ -113,7 +113,7 @@ import ProductFilterColor from './ProductFilterColor'
 export default {
   name: 'ProductFilter',
   components: {ProductFilterColor},
-  props: ['priceFrom', 'priceTo', 'categoryId', 'productColor', 'colorValue', 'colorsFilter'],
+  props: ['pageNumber', 'priceFrom', 'priceTo', 'categoryId', 'productColor', 'colorValue', 'colorsFilter'],
 
   data () {
     return {
@@ -134,12 +134,14 @@ export default {
       this.$emit('update:priceTo', this.currentPriceTo)
       this.$emit('update:categoryId', this.currentCategoryId)
       this.$emit('update:colorsFilter', this.currentColorsFilter)
+      this.$emit('update:pageNumber', 1)
     },
     reset () {
       this.$emit('update:priceFrom', 0)
       this.$emit('update:priceTo', 0)
       this.$emit('update:categoryId', 0)
       this.$emit('update:colorsFilter', '')
+      this.$emit('update:pageNumber', 1)
     },
   },
   watch: {
